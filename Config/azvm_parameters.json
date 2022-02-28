@@ -1,0 +1,82 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": ""
+        },
+        "networkInterfaceName": {
+            "value": ""
+        },
+        "networkSecurityGroupName": {
+            "value": ""
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "AllowingWinRMHTTPS",
+                    "properties": {
+                        "priority": 102,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceApplicationSecurityGroups": [],
+                        "destinationApplicationSecurityGroups": [],
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "5986"
+                    }
+                },
+                {
+                    "name": "AllowingWinRMHTTP",
+                    "properties": {
+                        "priority": 103,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceApplicationSecurityGroups": [],
+                        "destinationApplicationSecurityGroups": [],
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "5985"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": ""
+        },
+        "virtualNetworkId": {
+            "value": ""
+        },
+        "virtualMachineName": {
+            "value": ""
+        },
+        "virtualMachineComputerName": {
+            "value": ""
+        },
+        "virtualMachineRG": {
+            "value": ""
+        },
+        "osDiskType": {
+            "value": ""
+        },
+        "virtualMachineSize": {
+            "value": ""
+        },
+        "adminUsername": {
+            "value": ""
+        },
+        "adminPassword": {
+            "value": ""
+        },
+        "patchMode": {
+            "value": ""
+        },
+        "enableHotpatching": {
+            "value": false
+		}
+    }
+}
