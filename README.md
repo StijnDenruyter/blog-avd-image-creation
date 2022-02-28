@@ -1,0 +1,1 @@
+# blog-avd-image-creation
